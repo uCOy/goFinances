@@ -1,5 +1,6 @@
 import React from 'react';
 import { HighlightCard } from '../../components/HighlightCard';
+import { TransactionCard } from '../../components/TransactionCard';
 import { 
   Container,
   Header,
@@ -11,9 +12,42 @@ import {
   UserWrapper,
   Icon,
   HighlightCards,
+  Transactions,
+  Title,
+  TransactionList,
 }  from './styles'; 
 
 export function Dashboard(){
+
+  const data = [
+    {
+      title:'Desenvolvimento de site',
+      amount:'R$ 12.000,00',
+      category:{
+        name: 'Vendas',
+        icon: 'dollar-sign'
+      },         
+      date:'13/04/2020'
+    },
+    {
+      title:'Hamburgueria Pizzy',
+      amount:'- R$ 59,00',
+      category:{
+        name: 'Alimentação',
+        icon: 'coffee'
+      },
+      date:'10/04/2020',
+    },
+    {
+      title:'Aluguel do apartamento',
+      amount:'- R$ 1.200,00',
+      category:{
+        name: 'Casa',
+        icon: 'home'
+      },
+      date:'23/03/2020',
+    }
+  ]
   return(
     <Container>
       <Header>
@@ -50,6 +84,20 @@ export function Dashboard(){
           type="total"
         />
       </HighlightCards>
+      <Transactions>
+        <Title>
+          Listagem
+        </Title>
+        <TransactionList 
+          data={data}
+          renderItem={( { item }) => 
+            <TransactionCard data={item} />
+          }
+        />
+          {/* <TransactionCard 
+            data = {data[0]}
+          /> */}
+      </Transactions>
     </Container>
   )
 }
