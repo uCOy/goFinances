@@ -5,6 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import theme from './src/global/styles/theme';
 
 import { Dashboard } from './src/screens/dashboard/index';
+import { Register } from './src/screens/Register/index';
 import {
   useFonts,
   Poppins_400Regular,
@@ -26,7 +27,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Dashboard/>
+      <Register/>
     </ThemeProvider>
   );
 }
