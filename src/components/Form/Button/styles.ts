@@ -1,14 +1,14 @@
 import { RFValue } from 'react-native-responsive-fontsize';
-import { TouchableOpacityProps } from 'react-native';
+import { TouchableOpacity } from 'react-native';
 import styled from "styled-components/native";
 
-export const Container = styled(TouchableOpacityProps).attrs(({theme}) => ({
+export const Container = styled(TouchableOpacity).attrs(({theme}) => ({
   placeholderTextColor: theme.colors.text,
 }))`
   width: 100%;
   padding: 18px;
   border-radius: 5px;
-  background-color: ${( {theme} ) => theme.colors.orage};
+  background-color: ${( {theme} ) => theme.colors.orange};
   align-items: center;
 `;
 
