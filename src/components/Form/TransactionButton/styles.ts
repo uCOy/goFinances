@@ -50,6 +50,7 @@ export const Icon = styled(Feather)<IconProps>`
   color: ${({ theme, type }) => 
     type === 'up' ? theme.colors.green : theme.colors.red};
 
-  color: ${({ theme, type, isActive }) => 
-  isActive && type === 'down' ? theme.colors.green_light : theme.colors.red_light};
+/* 
+  ${({ theme, type, isActive }) => 
+  isActive && type === 'down' ? theme.colors.green_light : theme.colors.red_light}; */
 `;
