@@ -46,6 +46,7 @@ export function CategorySelect({
         renderItem={({item}) => (
           <Category 
             onPress={ () => handleCategorySelect(item)}
+            isActive={category.key === item.key}
           >
             <Icon name={item.icon} />
             <Name>{item.name}</Name>
