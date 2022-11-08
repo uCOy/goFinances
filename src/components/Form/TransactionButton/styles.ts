@@ -22,7 +22,7 @@ export const Container = styled(TouchableOpacity)<ContainerProps>`
 
   padding: 18px 36px;
   border-width: ${( { isActive }) => isActive ? 0 : 1.5}px;
-  border-style: solid;
+  border-style: solid; 
   border-color: ${( {theme}) => theme.colors.text};
   border-radius: 5px;
 
@@ -46,7 +46,7 @@ export const Title = styled.Text`
 
 export const Icon = styled(Feather)<IconProps>`
   font-size: ${RFValue(24)}px;
-  margin-left: 12px;
+  margin-right: 12px;
   color: ${({ theme, type }) => 
     type === 'up' ? theme.colors.green : theme.colors.red};
 
