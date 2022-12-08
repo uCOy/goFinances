@@ -8,7 +8,7 @@ import LogoSvg from '../../assets/logo.svg';
 
 // import { useAuth } from '../../hooks/auth';
 
-import { SignInSocialButton } from '../../components/SignInSocialButton'
+import { SignInSocialButton } from '../../components/SignInSocialButton';
 
 import {
   Container,

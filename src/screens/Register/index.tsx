@@ -82,7 +82,7 @@ export function Register() {
       category: Category.key,
       date: new Date()
     };
-    console.log(newTransaction);
+    // console.log(newTransaction);
     try {
       const data = await AsyncStorage.getItem(dataKey);
       const currentData = data ? JSON.parse(data) : [];
@@ -107,7 +107,7 @@ export function Register() {
   useEffect(() => {
     async function loadData() {
       const data = await AsyncStorage.getItem(dataKey);
-      console.log(data!);
+      // console.log(data!);
     }
     loadData();
 
